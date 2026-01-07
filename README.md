@@ -5,10 +5,16 @@ This approach uses a stimulus channel that is transduced into a recorded signal 
 
 ## Encoding scheme
 
-- Bit `0` → short ON pulse  
-- Bit `1` → long ON pulse  
-- OFF gaps separate pulses  
-- Characters are encoded as 8-bit ASCII  
-- Long pulses at the beginning and end serve as start/stop markers  
+-Two display states are used: square_0, a black square corresponding to no photodiode stimulation, and square_1, a white square corresponding to maximal photodiode stimulation. These states can also be used during the experiment as general on/off trigger markers.
+
+-Bit 0 is encoded as a short ON pulse.
+
+-Bit 1 is encoded as a long ON pulse.
+
+-OFF gaps separate consecutive pulses.
+
+-Characters are encoded using 8-bit ASCII representation.
+
+-Long ON pulses at the beginning and end of each message serve as start and stop markers.
 
 
